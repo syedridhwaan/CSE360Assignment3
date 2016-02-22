@@ -26,27 +26,73 @@ public class CalculatorTest {
 
 	@Test
 	public final void testGetTotal() {
-		fail("Not yet implemented"); // TODO
+		
+		Calculator tester = new Calculator();
+		assertEquals(tester.getTotal(),0);
+		tester.add(20);
+		assertEquals(tester.getTotal(),20);
+		tester.subtract(10);
+		assertEquals(tester.getTotal(),10);
+		tester.multiply(3);
+		assertEquals(tester.getTotal(),30);
+		tester.divide(5);
+		assertEquals(tester.getTotal(),6);
+			
 	}
 
 	@Test
 	public final void testAdd() {
-		fail("Not yet implemented"); // TODO
+		Calculator tester = new Calculator();
+		tester.add(20);
+		assertEquals(tester.getTotal(),20);
+		tester.add(5);
+		assertEquals(tester.getTotal(),25);
+		tester.add(11);
+		assertEquals(tester.getTotal(),36);
+		
+	
+	
 	}
 
 	@Test
 	public final void testSubtract() {
-		fail("Not yet implemented"); // TODO
+		
+		Calculator tester = new Calculator();
+		tester.add(200);
+		tester.subtract(50);
+		assertEquals(tester.getTotal(),150);
+		tester.subtract(25);
+		assertEquals(tester.getTotal(),125);
+		tester.subtract(124);
+		assertEquals(tester.getTotal(),1);
+		
 	}
 
 	@Test
 	public final void testMultiply() {
-		fail("Not yet implemented"); // TODO
+		
+		Calculator tester = new Calculator();
+		tester.add(5);
+		tester.multiply(5);
+		assertEquals(tester.getTotal(),25);
+		tester.multiply(5);
+		assertEquals(tester.getTotal(),125);
+
 	}
 
 	@Test
 	public final void testDivide() {
-		fail("Not yet implemented"); // TODO
+		Calculator tester = new Calculator();
+		tester.add(200);
+		tester.divide(0);
+		assertEquals(tester.getTotal(),0);
+		tester.add(200);
+		tester.divide(10);
+		assertEquals(tester.getTotal(),20);
+		tester.divide(4);
+		assertEquals(tester.getTotal(),5);
+
+
 	}
 
 	@Test
